@@ -6,8 +6,8 @@ Place graphics in the photos folder.
 To update the Readme you will need to click create pull request so it can be merged to master.
 Write what you plan to work on below so there isn't overlap
 
-Mac --> attackers:::
-Matt -->:::
-Joshua -->:::
-Jonathan -->:::
-Sean York -->:::
+Mac --> attackers :::
+Matt --> :::
+Joshua --> :::
+Jonathan --> :::
+Sean York --> :::
