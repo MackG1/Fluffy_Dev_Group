@@ -1,4 +1,4 @@
-# Fluffy_Dev_Group
+# READ THIS
 Use the read me to indicate what work still needs to be done. 
 When you commit changes only commit to your branch, and specify what was done in that change so I can merge to master.
 If you commit broken code make sure that its clear in the commit message and in the code. 
