@@ -1,3 +1,6 @@
+import pygame
+
+
 class Attacker(pygame.sprite.Sprite):
     def __init__(self, x_position, y_position):
         super().__init__()

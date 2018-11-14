@@ -1,3 +1,6 @@
+import pygame
+
+
 class Player:
     def __init__(self, x_position, y_position):
         self.x_position = x_position

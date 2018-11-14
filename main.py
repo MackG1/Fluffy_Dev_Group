@@ -1,4 +1,6 @@
 import pygame
+from attacker import Attacker
+from player import Player
 
 pygame.init()
 screen_width = 1000
