@@ -30,5 +30,5 @@ while carryOn:
     sprites_list.draw(screen)
     pygame.display.flip()
 
-    clock.tick(60)
+    clock.tick(59)
 
