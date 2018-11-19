@@ -11,16 +11,24 @@ sprites_list = pygame.sprite.Group()
 
 carryOn = True
 
-cat = Attacker(50, 50)
-sprites_list.add(cat)
+test_attacker = Attacker(1000, 100)
+sprites_list.add(test_attacker)
+
+test_player = Player(50, 50)
+sprites_list.add(test_player)
 
 while carryOn:
     for event in pygame.event.get():
 
         if event.type == pygame.QUIT:
             carryOn = False
-
+    mouse_position = pygame.mouse.get_pos()
+    test_player.rect.x = mouse_position[0]
+    test_player.rect.y = mouse_position[1]
+    test_attacker.move(test_player.rect.x, test_player.rect.y)
+    screen.fill((0, 0, 0))
     sprites_list.draw(screen)
     pygame.display.flip()
+
     clock.tick(60)
 
