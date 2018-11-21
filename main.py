@@ -11,7 +11,7 @@ sprites_list = pygame.sprite.Group()
 
 carryOn = True
 
-test_attacker = Attacker(1000, 100)
+test_attacker = Attacker(500, 500)
 sprites_list.add(test_attacker)
 
 test_player = Player(50, 50)
