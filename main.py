@@ -34,7 +34,7 @@ while carryOn:
             carryOn = False
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_a:
-                attacker.
+                test_attacker.alive = False
 
     # ------------------Game Logic ----------------->
     mouse_position = pygame.mouse.get_pos()

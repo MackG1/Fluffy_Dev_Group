@@ -16,7 +16,11 @@ class Attacker(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = x_position
         self.rect.y = y_position
+
+        # For combat
         self.alive = True
+        self.health = 10
+        self.strength = 2
 
     def move(self, player_x, player_y):
         if self.alive:
