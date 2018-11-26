@@ -41,18 +41,18 @@ class Attacker(pygame.sprite.Sprite):
             if abs(delta_x) > abs(delta_y):
                 x_movement = 2
                 y_movement = 0
-                print('1')
             elif abs(delta_x) < abs(delta_y):
                 y_movement = 2
                 x_movement = 0
-                print('2')
             else:
                 y_movement = 1
                 x_movement = 1
-                print('3')
 
             self.rect.x += (x_direction * x_movement)
             self.rect.y += (y_direction * y_movement)
+
+    def attack(self):
+        print("hit")
 
 
 

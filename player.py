@@ -14,3 +14,8 @@ class Player(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = x_position
         self.rect.y = y_position
+
+        # Attack variables
+        self.health = 30
+        self.strength = 2
+
