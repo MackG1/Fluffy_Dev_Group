@@ -21,6 +21,8 @@ class Attacker(pygame.sprite.Sprite):
         self.alive = True
         self.health = 10
         self.strength = 2
+        self.last_move_x = 0
+        self.last_move_y = 0
 
     def move(self, player_x, player_y):
         if self.alive:
@@ -50,10 +52,11 @@ class Attacker(pygame.sprite.Sprite):
 
             self.rect.x += (x_direction * x_movement)
             self.rect.y += (y_direction * y_movement)
+            self.last_move_x = x_direction * x_movement
+            self.last_move_y = y_direction * y_movement
 
     def attack(self):
         print("hit")
-
 
 
 
