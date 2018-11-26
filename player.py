@@ -9,8 +9,8 @@ class Player(pygame.sprite.Sprite):
         self.width = 20
         self.height = 20
 
-        self.image = pygame.Surface([self.width, self.height])
-        self.image.fill((255, 255, 255))
+        self.image = pygame.image.load("images/Buzz.png")
+        self.image = pygame.transform.scale(self.image, (70, 70))
         self.rect = self.image.get_rect()
         self.rect.x = x_position
         self.rect.y = y_position
