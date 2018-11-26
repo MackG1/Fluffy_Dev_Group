@@ -16,49 +16,39 @@ class Attacker(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = x_position
         self.rect.y = y_position
+        self.alive = True
 
     def move(self, player_x, player_y):
-        delta_x = player_x - self.rect.x
+        if self.alive:
+            delta_x = player_x - self.rect.x
 
-        if delta_x <= 0:
-            x_direction = -1
-        else:
-            x_direction = 1
+            if delta_x <= 0:
+                x_direction = -1
+            else:
+                x_direction = 1
 
-        delta_y = player_y - self.rect.y
+            delta_y = player_y - self.rect.y
 
-        if delta_y <= 0:
-            y_direction = -1
-        else:
-            y_direction = 1
+            if delta_y <= 0:
+                y_direction = -1
+            else:
+                y_direction = 1
 
-        '''
-        delta_total = delta_x + delta_y
-        try:
-            x_movement = int(self.speed * (delta_x/delta_total))
-        except ZeroDivisionError:
-            x_movement = 0
+            if abs(delta_x) > abs(delta_y):
+                x_movement = 2
+                y_movement = 0
+                print('1')
+            elif abs(delta_x) < abs(delta_y):
+                y_movement = 2
+                x_movement = 0
+                print('2')
+            else:
+                y_movement = 1
+                x_movement = 1
+                print('3')
 
-        try:
-            y_movement = int(self.speed * (delta_y/delta_total))
-        except ZeroDivisionError:
-            y_movement = 0
-        '''
-        if abs(delta_x) > abs(delta_y):
-            x_movement = 2
-            y_movement = 0
-            print('1')
-        elif abs(delta_x) < abs(delta_y):
-            y_movement = 2
-            x_movement = 0
-            print('2')
-        else:
-            y_movement = 1
-            x_movement = 1
-            print('3')
-
-        self.rect.x += (x_direction * x_movement)
-        self.rect.y += (y_direction * y_movement)
+            self.rect.x += (x_direction * x_movement)
+            self.rect.y += (y_direction * y_movement)
 
 
 
